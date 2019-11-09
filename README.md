@@ -1,4 +1,33 @@
 # check-workflow
+
+## Workflow
+
+To ensure code quality two types of tools are executed on code: linter to lint and compiler to build
+
+### lint
+
+[lint or linters](https://en.wikipedia.org/wiki/Lint_(software)) are tools to check source code to flag programming errors, bugs, stylistic errors, and suspicious constructs.
+
+#### code: swiftlint
+
+We use [swiftlint](https://github.com/realm/SwiftLint)
+Just run `swiftlint` at project root to see errors.
+
+#### storyboard: iblinter
+
+We use [iblinter](https://github.com/IBDecodable/IBLinter)
+Just run `iblinter` at project root to see errors.
+
+#### manifest.json: jsonlint
+
+We use [jsonlint](https://github.com/zaach/jsonlint) but any JSON linter can do the trick.
+
+### build
+
+Build step use `swift build` on iOS to check if there is no build errors in code.
+
+The dependencies are defined in `Package.swift`, in particular the 4d-for-ios sdk ([mock](https://github.com/4d-for-ios/QMobileUI))
+
 ## Form List 
  | Repository | Workflow |
  | ---------- | -------- |
