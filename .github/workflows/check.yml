@@ -17,11 +17,11 @@ jobs:
           npm install remark-lint-no-dead-urls
       - name: remark
         run: |
-          remark .
+          ./node_modules/.bin/remark .
       - name: validate-links
         run: |
-          remark -u validate-links  .
+          ./node_modules/.bin/remark -u validate-links  .
       - name: remark-lint
         run: |
-          remark -u remark-lint  .
+          ./node_modules/.bin/remark -u remark-lint  .
 
