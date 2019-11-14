@@ -1,0 +1,27 @@
+name: check
+on: push
+jobs:
+  lint:
+    name: lint
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+      - name: Install remark
+        run: |
+          npm install remark
+          npm install remark-validate-links
+          npm install remark-lint
+          npm install remark-lint-no-dead-urls
+      - name: remark
+        run: |
+          remark .
+      - name: validate-links
+        run: |
+          remark -u validate-links  .
+      - name: remark-lint
+        run: |
+          remark -u remark-lint  .
+

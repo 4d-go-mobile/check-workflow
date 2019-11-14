@@ -4,7 +4,7 @@
 
 To ensure code quality two types of tools are executed on code: linter to lint and compiler to build
 
-### lint
+### ✅ lint
 
 [lint or linters](https://en.wikipedia.org/wiki/Lint_(software)) are tools to check source code to flag programming errors, bugs, stylistic errors, and suspicious constructs.
 
@@ -22,13 +22,16 @@ Just run `iblinter` at project root to see errors.
 
 We use [jsonlint](https://github.com/zaach/jsonlint) but any JSON linter can do the trick.
 
-### build
+### 🏗️ build
 
 Build step use `swift build` on iOS to check if there is no build errors in code.
 
 The dependencies are defined in `Package.swift`, in particular the 4d-for-ios sdk ([mock](https://github.com/4d-for-ios/QMobileUI))
 
-## Form List 
+
+💡 You must be connected on github to see check log.
+
+## Form List
  | Repository | Workflow |
  | ---------- | -------- |
  |[4d-for-ios/4d-for-ios-form-list-FiveLabelsList](https://github.com/4d-for-ios/4d-for-ios-form-list-FiveLabelsList) | [![4d-for-ios-form-list-FiveLabelsList](https://github.com/4d-for-ios/4d-for-ios-form-list-FiveLabelsList/workflows/check/badge.svg)](https://github.com/4d-for-ios/4d-for-ios-form-list-FiveLabelsList/actions?workflow=check)|
@@ -58,7 +61,7 @@ The dependencies are defined in `Package.swift`, in particular the 4d-for-ios sd
  |[4d-for-ios/4d-for-ios-form-list-Tasks](https://github.com/4d-for-ios/4d-for-ios-form-list-Tasks) | [![4d-for-ios-form-list-Tasks](https://github.com/4d-for-ios/4d-for-ios-form-list-Tasks/workflows/check/badge.svg)](https://github.com/4d-for-ios/4d-for-ios-form-list-Tasks/actions?workflow=check)|
  |[4d-for-ios/4d-for-ios-form-list-VerticalCards](https://github.com/4d-for-ios/4d-for-ios-form-list-VerticalCards) | [![4d-for-ios-form-list-VerticalCards](https://github.com/4d-for-ios/4d-for-ios-form-list-VerticalCards/workflows/check/badge.svg)](https://github.com/4d-for-ios/4d-for-ios-form-list-VerticalCards/actions?workflow=check)|
  |[4d-for-ios/4d-for-ios-form-list-VisualTable](https://github.com/4d-for-ios/4d-for-ios-form-list-VisualTable) | [![4d-for-ios-form-list-VisualTable](https://github.com/4d-for-ios/4d-for-ios-form-list-VisualTable/workflows/check/badge.svg)](https://github.com/4d-for-ios/4d-for-ios-form-list-VisualTable/actions?workflow=check)|
-## Form Detail 
+## Form Detail
  | Repository | Workflow |
  | ---------- | -------- |
  |[4d-for-ios/4d-for-ios-form-detail-TasksDetail](https://github.com/4d-for-ios/4d-for-ios-form-detail-TasksDetail) | [![4d-for-ios-form-detail-TasksDetail](https://github.com/4d-for-ios/4d-for-ios-form-detail-TasksDetail/workflows/check/badge.svg)](https://github.com/4d-for-ios/4d-for-ios-form-detail-TasksDetail/actions?workflow=check)|
@@ -80,7 +83,7 @@ The dependencies are defined in `Package.swift`, in particular the 4d-for-ios sd
  |[4d-for-ios/4d-for-ios-form-detail-SimpleList](https://github.com/4d-for-ios/4d-for-ios-form-detail-SimpleList) | [![4d-for-ios-form-detail-SimpleList](https://github.com/4d-for-ios/4d-for-ios-form-detail-SimpleList/workflows/check/badge.svg)](https://github.com/4d-for-ios/4d-for-ios-form-detail-SimpleList/actions?workflow=check)|
   |[4d-for-ios/4d-for-ios-form-detail-ClientDetail](https://github.com/4d-for-ios/4d-for-ios-form-detail-ClientDetail) | [![4d-for-ios-form-detail-ClientDetail](https://github.com/4d-for-ios/4d-for-ios-form-detail-ClientDetail/workflows/check/badge.svg)](https://github.com/4d-for-ios/4d-for-ios-form-detail-ClientDetail/actions?workflow=check)|
   |[4d-for-ios/4d-for-ios-form-detail-InvoiceDetail](https://github.com/4d-for-ios/4d-for-ios-form-detail-InvoiceDetail) | [![4d-for-ios-form-detail-InvoiceDetail](https://github.com/4d-for-ios/4d-for-ios-form-detail-InvoiceDetail/workflows/check/badge.svg)](https://github.com/4d-for-ios/4d-for-ios-form-detail-InvoiceDetail/actions?workflow=check)|
-## Formatter 
+## Formatter
 
  | Repository | Workflow |
  | ---------- | -------- |
