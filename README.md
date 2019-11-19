@@ -10,13 +10,15 @@ To ensure code quality two types of tools are executed on code: linter to lint a
 
 #### code: swiftlint
 
-We use [swiftlint](https://github.com/realm/SwiftLint)
-Just run `swiftlint` at project root to see errors.
+We use [swiftlint](https://github.com/realm/SwiftLint) to lint source code
+
+💡 Just run `swiftlint` at project root.
 
 #### storyboard: iblinter
 
-We use [iblinter](https://github.com/IBDecodable/IBLinter)
-Just run `iblinter` at project root to see errors.
+We use [iblinter](https://github.com/IBDecodable/IBLinter) to lint storyboards
+
+💡 Just run `iblinter` at project root.
 
 #### manifest.json: jsonlint
 
@@ -29,7 +31,7 @@ Build step use `swift build` on iOS to check if there is no build errors in code
 The dependencies are defined in `Package.swift`, in particular the 4d-for-ios sdk ([mock](https://github.com/4d-for-ios/QMobileUI))
 
 
-💡 You must be connected on github to see check log.
+💡 You must be connected on github to read the check log.
 
 ## Form List
  | Repository | Workflow |
