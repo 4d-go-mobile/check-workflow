@@ -1,8 +1,10 @@
 # check-workflow
 
+This project aims to describe continous integration using [github workflow](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow) on form and formatters.
+
 ## Workflow
 
-To ensure code quality two types of tools are executed on code: linter to lint and compiler to build
+To ensure code quality two types of tools are executed on code: linter to lint and compiler to build.
 
 ### ✅ lint
 
@@ -12,11 +14,16 @@ To ensure code quality two types of tools are executed on code: linter to lint a
 
 We use [swiftlint](https://github.com/realm/SwiftLint) to lint source code
 
+A configuration file must be integrated [.swiftlint.yml](https://github.com/4d-for-ios/form-list-CardsTable/blob/master/.swiftlint.yml)
+
 💡 Just run `swiftlint` at project root.
+
 
 #### storyboard: iblinter
 
 We use [iblinter](https://github.com/IBDecodable/IBLinter) to lint storyboards
+
+A configuration file must be integrated [.iblinter.yml](https://github.com/4d-for-ios/form-list-CardsTable/blob/master/.iblinter.yml)
 
 💡 Just run `iblinter` at project root.
 
@@ -30,8 +37,23 @@ Build step use `swift build` on iOS to check if there is no build errors in code
 
 The dependencies are defined in `Package.swift`, in particular the 4d-for-ios sdk ([mock](https://github.com/4d-for-ios/QMobileUI))
 
-
 💡 You must be connected on github to read the check log.
+
+# Result board
+
+[Badge(image)](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#adding-a-workflow-status-badge-to-your-repository) could be added to project readme or in any markdown or html files to display continous integration result.
+
+```markdown
+[![:repo](https://github.com/:user/:repo/workflows/check/badge.svg)](https://github.com/:user/:repo/actions?workflow=check)
+```
+
+Badge to release with download could also be added using service like https://shields.io/
+
+```markdown
+[![release](https://img.shields.io/github/v/release/:user/:repo)](https://github.com/:user/:repo/releases/latest/download/:repo.zip)|
+```
+
+You could find an automatically generated list in [topic-workflow](https://github.com/4d-for-ios/topic-workflow/blob/master/list.md)
 
 ## Form List 
 
@@ -110,4 +132,3 @@ The dependencies are defined in `Package.swift`, in particular the 4d-for-ios sd
  |[4d-for-ios/formatter-TextToImage](https://github.com/4d-for-ios/formatter-TextToImage) | [![formatter-TextToImage](https://github.com/4d-for-ios/formatter-TextToImage/workflows/check/badge.svg)](https://github.com/4d-for-ios/formatter-TextToImage/actions?workflow=check) | [![release](https://img.shields.io/github/v/release/4d-for-ios/formatter-TextToImage)](https://github.com/4d-for-ios/formatter-TextToImage/releases/latest/download/formatter-TextToImage.zip)|
  |[4d-for-ios/formatter-TextToString](https://github.com/4d-for-ios/formatter-TextToString) | [![formatter-TextToString](https://github.com/4d-for-ios/formatter-TextToString/workflows/check/badge.svg)](https://github.com/4d-for-ios/formatter-TextToString/actions?workflow=check) | [![release](https://img.shields.io/github/v/release/4d-for-ios/formatter-TextToString)](https://github.com/4d-for-ios/formatter-TextToString/releases/latest/download/formatter-TextToString.zip)|
  |[4d-for-ios/formatter-Url](https://github.com/4d-for-ios/formatter-Url) | [![formatter-Url](https://github.com/4d-for-ios/formatter-Url/workflows/check/badge.svg)](https://github.com/4d-for-ios/formatter-Url/actions?workflow=check) | [![release](https://img.shields.io/github/v/release/4d-for-ios/formatter-Url)](https://github.com/4d-for-ios/formatter-Url/releases/latest/download/formatter-Url.zip)|
-
