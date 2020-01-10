@@ -2,44 +2,57 @@
 
 This project aims to describe continous integration using [github workflow](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow) on form and formatters.
 
-## Workflow
+## How to check your form?
+
+* [Github workflow files](form/workflow/) must be added under your project into .github/workflow directory.
+* [Tools configuration files](fform/iles/) must be added into project root.
+
+### ✅[Check Workflow](workflow/check.yml)
 
 To ensure code quality two types of tools are executed on code: linter to lint and compiler to build.
 
-### ✅ lint
+#### 👮‍lint
 
 [lint or linters](https://en.wikipedia.org/wiki/Lint_(software)) are tools to check source code to flag programming errors, bugs, stylistic errors, and suspicious constructs.
 
-#### code: swiftlint
+##### code: swiftlint
 
 We use [swiftlint](https://github.com/realm/SwiftLint) to lint source code
 
-A configuration file must be integrated [.swiftlint.yml](https://github.com/4d-for-ios/form-list-CardsTable/blob/master/.swiftlint.yml)
+A configuration file must be integrated [.swiftlint.yml](form/files/.swiftlint.yml) in project root directory.
 
-💡 Just run `swiftlint` at project root.
+💡 Then just run `swiftlint` at project root.
 
 
-#### storyboard: iblinter
+##### storyboard: iblinter
 
 We use [iblinter](https://github.com/IBDecodable/IBLinter) to lint storyboards
 
-A configuration file must be integrated [.iblinter.yml](https://github.com/4d-for-ios/form-list-CardsTable/blob/master/.iblinter.yml)
+A configuration file must be integrated [.iblinter.yml](form/files/.iblinter.yml) in project root directory.
 
-💡 Just run `iblinter` at project root.
+💡 Then just run `iblinter` at project root.
 
-#### manifest.json: jsonlint
+##### manifest.json: jsonlint
 
 We use [jsonlint](https://github.com/zaach/jsonlint) but any JSON linter can do the trick.
 
-### 🏗️ build
+#### 🏗️ build
 
 Build step use `swift build` on iOS to check if there is no build errors in code.
 
-The dependencies are defined in [`Package.swift`](https://github.com/4d-for-ios/form-list-CardsTable/blob/master/Package.swift), in particular the 4d-for-ios sdk ([mock](https://github.com/4d-for-ios/QMobileUI))
+The dependencies are defined in [`Package.swift`](form/files/Package.swift), in particular the 4d-for-ios sdk ([mock](https://github.com/4d-for-ios/QMobileUI))
 
 💡 You must be connected on github to read the check log.
 
-# Result board
+### 🚀[Release Workflow](workflow/release.yml)
+
+This workflow help you to provide bundled archive of your extension.
+
+When you create a new [release on github](https://help.github.com/en/github/administering-a-repository/creating-releases) the bundled archiveis  automatically attached to the release.
+
+---
+
+## Result board
 
 [Badge(image)](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#adding-a-workflow-status-badge-to-your-repository) could be added to project readme or in any markdown or html files to display continous integration result.
 
@@ -55,7 +68,7 @@ Badge to release with download could also be added using service like https://sh
 
 You could find an automatically generated list in [topic-workflow](https://github.com/4d-for-ios/topic-workflow/blob/master/list.md)
 
-## Form List 
+### Form List
 
  | Repository | Workflow | Download |
  | ---------- | -------- | -------- |
@@ -87,7 +100,7 @@ You could find an automatically generated list in [topic-workflow](https://githu
  |[4d-for-ios/form-list-VerticalCards](https://github.com/4d-for-ios/form-list-VerticalCards) | [![form-list-VerticalCards](https://github.com/4d-for-ios/form-list-VerticalCards/workflows/check/badge.svg)](https://github.com/4d-for-ios/form-list-VerticalCards/actions?workflow=check) | [![release](https://img.shields.io/github/v/release/4d-for-ios/form-list-VerticalCards)](https://github.com/4d-for-ios/form-list-VerticalCards/releases/latest/download/form-list-VerticalCards.zip)|
  |[4d-for-ios/form-list-VisualTable](https://github.com/4d-for-ios/form-list-VisualTable) | [![form-list-VisualTable](https://github.com/4d-for-ios/form-list-VisualTable/workflows/check/badge.svg)](https://github.com/4d-for-ios/form-list-VisualTable/actions?workflow=check) | [![release](https://img.shields.io/github/v/release/4d-for-ios/form-list-VisualTable)](https://github.com/4d-for-ios/form-list-VisualTable/releases/latest/download/form-list-VisualTable.zip)|
 
-## Form Detail 
+### Form Detail
 
  | Repository | Workflow | Download |
  | ---------- | -------- | -------- |
@@ -111,13 +124,13 @@ You could find an automatically generated list in [topic-workflow](https://githu
  |[4d-for-ios/form-detail-TripleCircle](https://github.com/4d-for-ios/form-detail-TripleCircle) | [![form-detail-TripleCircle](https://github.com/4d-for-ios/form-detail-TripleCircle/workflows/check/badge.svg)](https://github.com/4d-for-ios/form-detail-TripleCircle/actions?workflow=check) | [![release](https://img.shields.io/github/v/release/4d-for-ios/form-detail-TripleCircle)](https://github.com/4d-for-ios/form-detail-TripleCircle/releases/latest/download/form-detail-TripleCircle.zip)|
  |[4d-for-ios/form-detail-VisualContact](https://github.com/4d-for-ios/form-detail-VisualContact) | [![form-detail-VisualContact](https://github.com/4d-for-ios/form-detail-VisualContact/workflows/check/badge.svg)](https://github.com/4d-for-ios/form-detail-VisualContact/actions?workflow=check) | [![release](https://img.shields.io/github/v/release/4d-for-ios/form-detail-VisualContact)](https://github.com/4d-for-ios/form-detail-VisualContact/releases/latest/download/form-detail-VisualContact.zip)|
 
-## Form Login 
+### Form Login
 
  | Repository | Workflow | Download |
  | ---------- | -------- | -------- |
  |[4d-for-ios/form-login-SignInWithApple](https://github.com/4d-for-ios/form-login-SignInWithApple) | [![form-login-SignInWithApple](https://github.com/4d-for-ios/form-login-SignInWithApple/workflows/check/badge.svg)](https://github.com/4d-for-ios/form-login-SignInWithApple/actions?workflow=check) | [![release](https://img.shields.io/github/v/release/4d-for-ios/form-login-SignInWithApple)](https://github.com/4d-for-ios/form-login-SignInWithApple/releases/latest/download/form-login-SignInWithApple.zip)|
 
-## Formatter 
+### Formatter
 
  | Repository | Workflow | Download |
  | ---------- | -------- | -------- |
