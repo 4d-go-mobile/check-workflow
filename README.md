@@ -35,7 +35,7 @@ We use [jsonlint](https://github.com/zaach/jsonlint) but any JSON linter can do 
 
 Build step use `swift build` on iOS to check if there is no build errors in code.
 
-The dependencies are defined in `Package.swift`, in particular the 4d-for-ios sdk ([mock](https://github.com/4d-for-ios/QMobileUI))
+The dependencies are defined in [`Package.swift`](https://github.com/4d-for-ios/form-list-CardsTable/blob/master/Package.swift), in particular the 4d-for-ios sdk ([mock](https://github.com/4d-for-ios/QMobileUI))
 
 💡 You must be connected on github to read the check log.
 
