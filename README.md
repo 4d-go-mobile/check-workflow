@@ -7,7 +7,7 @@ This project aims to describe continous integration using [github workflow](http
 * [Github workflow files](form/workflows/) must be added under your project into .github/workflow directory.
 * [Tools configuration files](form/files/) must be added into project root.
 
-### ✅[Check Workflow](workflows/check.yml)
+### ✅[Check Workflow](form/workflows/check.yml)
 
 To ensure code quality two types of tools are executed on code: linter to lint and compiler to build.
 
@@ -44,7 +44,7 @@ The dependencies are defined in [`Package.swift`](form/files/Package.swift), in 
 
 💡 You must be connected on github to read the check log.
 
-### 🚀[Release Workflow](workflows/release.yml)
+### 🚀[Release Workflow](form/workflows/release.yml)
 
 This workflow help you to provide bundled archive of your extension.
 
