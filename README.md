@@ -5,13 +5,14 @@ This project aims to describe continous integration using [github workflow](http
 ## How to check your form?
 
 * [Github workflow files](form/workflows/) must be added under your project into .github/workflow directory.
-* [Tools configuration files](form/files/) must be added into project root.
+* [Swift package configuration file](form/files/Package.swift) must be added into project root.
+* [Tools configuration files *.yml](form/files/) could be added into project root (if not default one will be used).
 
 ### ✅[Check Workflow](form/workflows/check.yml)
 
 To ensure code quality two types of tools are executed on code: linter to lint and compiler to build.
 
-#### 👮‍lint
+#### 👮‍♂️lint
 
 [lint or linters](https://en.wikipedia.org/wiki/Lint_(software)) are tools to check source code to flag programming errors, bugs, stylistic errors, and suspicious constructs.
 
@@ -19,18 +20,18 @@ To ensure code quality two types of tools are executed on code: linter to lint a
 
 We use [swiftlint](https://github.com/realm/SwiftLint) to lint source code
 
-A configuration file must be integrated [.swiftlint.yml](form/files/.swiftlint.yml) in project root directory.
+A configuration file could be integrated [.swiftlint.yml](form/files/.swiftlint.yml) in project root directory to specify where the source file are.
 
-💡 Then just run `swiftlint` at project root.
+💡 Then just run `swiftlint` at project root to check yourself.
 
 
 ##### storyboard: iblinter
 
 We use [iblinter](https://github.com/IBDecodable/IBLinter) to lint storyboards
 
-A configuration file must be integrated [.iblinter.yml](form/files/.iblinter.yml) in project root directory.
+A configuration file could be integrated [.iblinter.yml](form/files/.iblinter.yml) in project root directory specify where the source file are.
 
-💡 Then just run `iblinter` at project root.
+💡 Then just run `iblinter` at project root to check yourself.
 
 ##### manifest.json: jsonlint
 
