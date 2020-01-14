@@ -6,7 +6,7 @@ This project aims to describe continous integration using [github workflow](http
 
 * [Github workflow files](form/workflows/) must be added under your project into .github/workflow directory.
 * [Swift package configuration file](form/files/Package.swift) must be added into project root.
-* [Tools configuration files *.yml](form/files/) could be added into project root (if not default one will be used).
+* [Tools configuration files *.yml](form/quality/) could be added into project root (if not default one will be used).
 
 ### ✅[Check Workflow](form/workflows/check.yml)
 
