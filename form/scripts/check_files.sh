@@ -5,6 +5,7 @@ checkUrl="https://raw.githubusercontent.com/4d-for-ios/check-workflow/master"
 echo "check SwiftPM"
 if [ ! -f "Package.swift" ]; then
   curl -L $checkUrl/form/files/Package.swift --output Package.swift
+  echo "⚠️ Edit Package.swift file to change the Package name"
 fi
 
 echo "check workflows"
