@@ -1,14 +1,22 @@
 # check-workflow
 
-This project aims to describe continous integration using [github workflow](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow) on form and formatters.
+This project aims to describe [continous integration](https://en.wikipedia.org/wiki/Continuous_integration) and [delivery](https://en.wikipedia.org/wiki/Continuous_delivery) using [github workflow](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow) on form and formatters.
 
-## How to check your form?
+This process aim to improve the quality and to reduce the time taken to deliver it.
+
+## How to check your forms?
 
 * [Github workflow files](form/workflows/) must be added under your project into .github/workflow directory.
 * [Swift package configuration file](form/files/Package.swift) must be added into project root.
 * [Tools configuration files *.yml](form/quality/) could be added into project root (if not default one will be used).
 
-### ✅[Check Workflow](form/workflows/check.yml)
+You launch this script in your form folder root to automatically download it
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/4d-for-ios/check-workflow/master/form/scripts/check_files.sh | bash -s
+```
+
+### ✅ [Check Workflow](form/workflows/check.yml)
 
 To ensure code quality two types of tools are executed on code: linter to lint and compiler to build.
 
@@ -45,11 +53,21 @@ The dependencies are defined in [`Package.swift`](form/files/Package.swift), in 
 
 💡 You must be connected on github to read the check log.
 
-### 🚀[Release Workflow](form/workflows/release.yml)
+### 🚀 [Release Workflow](form/workflows/release.yml)
 
-This workflow help you to provide bundled archive of your extension.
+This workflow help you to provide bundled archive of your extension to share it.
 
-When you create a new [release on github](https://help.github.com/en/github/administering-a-repository/creating-releases) the bundled archiveis  automatically attached to the release.
+When you create a new [release on github](https://help.github.com/en/github/administering-a-repository/creating-releases) the bundled archive is  automatically attached to the release.
+
+## How to check your formatters?
+
+* [Github workflow files](formatter/workflows/) must be added under your project into .github/workflow directory.
+
+You launch this script in your form folder root to automatically download it
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/4d-for-ios/check-workflow/master/formatter/scripts/check_files.sh | bash -s
+```
 
 ---
 
