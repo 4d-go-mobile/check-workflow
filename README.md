@@ -7,7 +7,7 @@ This process aim to improve the quality and to reduce the time taken to deliver 
 ## How to check your forms?
 
 * [Github workflow files](form/workflows/) must be added under your project into .github/workflow directory.
-* [Swift package configuration file](form/files/Package.swift) must be added into project root.
+* [Swift package configuration file](form/files/Package.swift) must be added into project root to test yourself. (if not default one will be used)
 * [Tools configuration files *.yml](form/quality/) could be added into project root (if not default one will be used).
 
 You launch this script in your form folder root to automatically download it
