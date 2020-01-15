@@ -1,16 +1,5 @@
 #!/bin/bash
 
-if curl --head --silent --fail $1 2> /dev/null;
- then
-  echo "Checking URL $1"
- else
-  echo "The URL $1 is not accessible"
-  exit 1
-fi
-
-echo "clone"
-git clone $1 && cd "$(basename "$1" .git)"
-
 checkUrl="https://raw.githubusercontent.com/4d-for-ios/check-workflow"
 
 echo "check workflows"
@@ -22,8 +11,3 @@ fi
 if [ ! -f ".github/workflows/release.yml" ]; then
   curl -L $checkUrl/master/formatter/workflows/release.yml --output .github/workflows/release.yml
 fi
-
-git add .
-git diff --quiet && git diff --staged --quiet || git commit -a -m "Add mandatory files"
-
-# create PR ? https://github.com/peter-evans/create-pull-request

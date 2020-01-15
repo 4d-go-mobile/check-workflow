@@ -1,8 +1,8 @@
-name: check
+name: ✅ check
 on: push
 jobs:
   lint:
-    name: ✅lint
+    name: 🧹 lint
     runs-on: macOS-latest
     steps:
       - name: ⬇️ Checkout

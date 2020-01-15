@@ -1,11 +1,11 @@
-name: check
+name: ✅ check
 on: push
 jobs:
   lint:
-    name: ✅lint
+    name: 🧹 lint
     runs-on: macOS-latest
     steps:
-      - name: ⬇️Checkout
+      - name: ⬇️ Checkout
         uses: actions/checkout@master
         with:
           fetch-depth: 1
@@ -14,7 +14,7 @@ jobs:
           brew install swiftlint
         env:
           HOMEBREW_NO_INSTALL_CLEANUP: 1
-      - name: 🧹Code Lint
+      - name: 🧹 Code Lint
         run: |
           if [ ! -f ".swiftlint.yml" ]; then
             curl -L https://raw.githubusercontent.com/4d-for-ios/check-workflow/master/form/quality/.swiftlint.yml --output .swiftlint.yml
@@ -25,7 +25,7 @@ jobs:
           brew install IBDecodable/homebrew-tap/iblinter
         env:
           HOMEBREW_NO_INSTALL_CLEANUP: 1
-      - name: 🧹Storyboard Lint
+      - name: 🧹 Storyboard Lint
         run: |
           if [ ! -f ".iblinter.yml" ]; then
             curl -L https://raw.githubusercontent.com/4d-for-ios/check-workflow/master/form/quality/.iblinter.yml --output .iblinter.yml
@@ -34,18 +34,18 @@ jobs:
       - name: ⚙️ Install jsonlint
         run: |
           brew install jsonlint | tee
-      - name: 🧹Manifest Lint
+      - name: 🧹 Manifest Lint
         run: |
           cat manifest.json | jsonlint
   build:
-    name: 🏗build
+    name: 🏗 build
     runs-on: macOS-latest
     steps:
-      - name: ⬇️Checkout
+      - name: ⬇️ Checkout
         uses: actions/checkout@master
         with:
           fetch-depth: 1
-      - name: 👷Swift build
+      - name: 👷 Swift build
         run: |
           sdk=`xcrun -sdk iphonesimulator -show-sdk-path`
           sdkVersion=`echo $sdk | sed -E 's/.*iPhoneSimulator(.*)\.sdk/\1/'`
