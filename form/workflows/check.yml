@@ -3,7 +3,7 @@ on: push
 jobs:
   lint:
     name: 🧹 lint
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
       - name: ⬇️ Checkout
         uses: actions/checkout@master
@@ -39,7 +39,9 @@ jobs:
           cat manifest.json | jsonlint
   build:
     name: 🏗 build
-    runs-on: macOS-latest
+    runs-on: macos-latest
+    env:
+      RELEASE_REPO: "https://raw.githubusercontent.com/4d-for-ios/check-workflow/master"
     steps:
       - name: ⬇️ Checkout
         uses: actions/checkout@master
@@ -47,6 +49,4 @@ jobs:
           fetch-depth: 1
       - name: 👷 Swift build
         run: |
-          sdk=`xcrun -sdk iphonesimulator -show-sdk-path`
-          sdkVersion=`echo $sdk | sed -E 's/.*iPhoneSimulator(.*)\.sdk/\1/'`
-          swift build  -Xswiftc "-sdk" -Xswiftc "$sdk" -Xswiftc "-target" -Xswiftc "x86_64-apple-ios$sdkVersion-simulator"
+          curl -fsSL $RELEASE_REPO/form/scripts/swift_build.sh | bash -s
