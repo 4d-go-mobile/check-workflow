@@ -1,16 +1,16 @@
 # check-workflow
 
-This project aims to describe [continous integration](https://en.wikipedia.org/wiki/Continuous_integration) and [delivery](https://en.wikipedia.org/wiki/Continuous_delivery) using [github workflow](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow) on form and formatters.
+This project describe the [continous integration](https://en.wikipedia.org/wiki/Continuous_integration) and [delivery](https://en.wikipedia.org/wiki/Continuous_delivery) processes using [github workflow](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow) on `forms` and `formatters`.
 
-This process aim to improve the quality and to reduce the time taken to deliver it.
+These processes aim to improve the quality and to reduce the time taken to deliver it.
 
 ## How to check your forms?
 
 * [Github workflow files](form/workflows/) must be added under your project into .github/workflow directory.
-* [Swift package configuration file](form/files/Package.swift) must be added into project root to test yourself. (if not default one will be used)
-* [Tools configuration files *.yml](form/quality/) could be added into project root (if not default one will be used).
+* [Swift package configuration file](form/files/Package.swift) must be added into your project root to test yourself. (if not default one will be used)
+* [Tools configuration files *.yml](form/quality/) could be added into your project root (if not default one will be used).
 
-You launch this script in your form folder root to automatically download it
+💡 Open the terminal, go to your form project root folder and launch this command line to automatically download it.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/4d-for-ios/check-workflow/master/form/scripts/check_files.sh | bash -s
@@ -63,7 +63,7 @@ When you create a new [release on github](https://help.github.com/en/github/admi
 
 * [Github workflow files](formatter/workflows/) must be added under your project into .github/workflow directory.
 
-You launch this script in your form folder root to automatically download it
+💡 Open the terminal, go to your form project root folder and launch this command line to automatically download it.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/4d-for-ios/check-workflow/master/formatter/scripts/check_files.sh | bash -s
