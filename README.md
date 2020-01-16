@@ -6,7 +6,7 @@ These processes aim to improve the quality and to reduce the time taken to deliv
 
 ## How to check your forms?
 
-* [Github workflow files](form/workflows/) must be added under your project into .github/workflow directory.
+* [Github workflow files](form/workflows/) must be added under your project into `.github/workflows` directory.
 * [Swift package configuration file](form/files/Package.swift) must be added into your project root to test yourself. (if not default one will be used)
 * [Tools configuration files *.yml](form/quality/) could be added into your project root (if not default one will be used).
 
@@ -61,7 +61,7 @@ When you create a new [release on github](https://help.github.com/en/github/admi
 
 ## How to check your formatters?
 
-* [Github workflow files](formatter/workflows/) must be added under your project into .github/workflow directory.
+* [Github workflow files](formatter/workflows/) must be added under your project into `.github/workflows` directory.
 
 💡 Open the terminal, go to your form project root folder and launch this command line to automatically download it.
 
