@@ -6,11 +6,11 @@ These processes aim to improve the quality and to reduce the time taken to deliv
 
 ## How to check your forms?
 
-* [Github workflow files](form/workflows/) must be added under your project into `.github/workflows` directory.
-* [Swift package configuration file](form/files/Package.swift) must be added into your project root to test yourself. (if not default one will be used)
-* [Tools configuration files *.yml](form/quality/) could be added into your project root (if not default one will be used).
+* [Github workflow files](form/workflows/) must be added under `.github/workflows` folder into your form root folder.
+* [Swift package configuration file](form/files/Package.swift) must be added into your form root folder to test yourself. (if not default one will be used)
+* [Tools configuration files *.yml](form/quality/) could be added into your  form root folder (if not default one will be used).
 
-💡 Open the terminal, go to your form project root folder and launch this command line to automatically download it.
+💡 Open the terminal, go to your form root folder and launch this command line to automatically download it.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/4d-for-ios/check-workflow/master/form/scripts/check_files.sh | bash -s
@@ -28,7 +28,7 @@ To ensure code quality two types of tools are executed on code: linter to lint a
 
 We use [swiftlint](https://github.com/realm/SwiftLint) to lint source code
 
-A configuration file could be integrated [.swiftlint.yml](form/files/.swiftlint.yml) in project root directory to specify where the source file are.
+A configuration file could be integrated [.swiftlint.yml](form/files/.swiftlint.yml) in form root folder to specify where the source file are.
 
 💡 Then just run `swiftlint` at project root to check yourself.
 
@@ -37,7 +37,7 @@ A configuration file could be integrated [.swiftlint.yml](form/files/.swiftlint.
 
 We use [iblinter](https://github.com/IBDecodable/IBLinter) to lint storyboards
 
-A configuration file could be integrated [.iblinter.yml](form/files/.iblinter.yml) in project root directory specify where the source file are.
+A configuration file could be integrated [.iblinter.yml](form/files/.iblinter.yml) in form root folder specify where the source file are.
 
 💡 Then just run `iblinter` at project root to check yourself.
 
@@ -61,9 +61,9 @@ When you create a new [release on github](https://help.github.com/en/github/admi
 
 ## How to check your formatters?
 
-* [Github workflow files](formatter/workflows/) must be added under your project into `.github/workflows` directory.
+* [Github workflow files](formatter/workflows/) must be added under `.github/workflows` folder into your form root folder.
 
-💡 Open the terminal, go to your form project root folder and launch this command line to automatically download it.
+💡 Open the terminal, go to your formatter root folder and launch this command line to automatically download it.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/4d-for-ios/check-workflow/master/formatter/scripts/check_files.sh | bash -s
