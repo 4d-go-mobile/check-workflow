@@ -12,6 +12,10 @@ fi
 sdk=`xcrun -sdk iphonesimulator -show-sdk-path`
 sdkVersion=`echo $sdk | sed -E 's/.*iPhoneSimulator(.*)\.sdk/\1/'`
 swift build  -Xswiftc "-sdk" -Xswiftc "$sdk" -Xswiftc "-target" -Xswiftc "x86_64-apple-ios$sdkVersion-simulator"
+if [ $? -ne 0 ]; then
+  echo "Failed to compile" >&2
+  exit 1
+fi
 
 # check external SDK version
 curl -fsSL $checkUrl/form/scripts/check_sdk_version.sh | bash -s 5.1.3
